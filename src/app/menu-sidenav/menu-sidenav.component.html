@@ -1,0 +1,44 @@
+<mat-sidenav-container class="sidenav-container {{storedTheme}}">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+  [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+  [mode]="(isHandset$ | async) ? 'over' : 'side'"
+  [opened]="(isHandset$ | async) === false">
+  <mat-toolbar><a routerLink="/home">{{ 'sideNav.title' | translate }}</a></mat-toolbar>
+  <mat-nav-list>
+    <div class="mat-list-item mb-4"><a class="p-4" mat-list-item routerLink="/profile"><mat-icon class="pt-1" fontIcon="person"></mat-icon>{{ 'sideNav.users' | translate}}</a></div>
+    <div >
+      <!-- <p>{{'sideNav.select' | translate}} : </p> -->
+      <select class="form-select userName" (click)="selectLang($any($event.target).value)" aria-label="Default select example">
+        <option *ngFor="let lang of languages">{{ lang }}</option>
+      </select>
+    </div>
+    <div class="mode m-2">
+      <label class="toggle"  for="dark-mode-btn">
+        <div class="toggle-track">
+          <input type="checkbox" [ngClass]="(storedTheme === 'theme-dark') ? 'theme-switcher active' : 'theme-switcher'" (click)="setTheme()" class="toggle-checkbox" id="dark-mode-btn" />
+          <span class="toggle-thumb"></span>
+          <img src="./../../assets/images/sun.png" alt="">
+          <img src="./../../assets/images/moon.png" alt="">
+        </div>
+      </label>
+    </div> 
+  </mat-nav-list>
+</mat-sidenav>
+<mat-sidenav-content>
+  <mat-toolbar color="primary">
+    <button
+    type="button"
+    aria-label="Toggle sidenav"
+    mat-icon-button
+    (click)="drawer.toggle()"
+    *ngIf="isHandset$ | async">
+    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+  </button>
+  <div class="mat-nav-button">
+    <a mat-list-item routerLink="/dictionary"><button mat-raised-button color="primary">{{ 'buttons.navD' | translate }}</button></a>
+  </div>
+</mat-toolbar>
+<!-- Content Here -->
+<router-outlet></router-outlet> 
+</mat-sidenav-content>
+</mat-sidenav-container>

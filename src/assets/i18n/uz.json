@@ -1,0 +1,15 @@
+{
+    "sideNav" : {
+        "title" : "LLDashboard",
+        "users" : "Profil",
+        "select": "Tilni tanlang"
+    },
+    "buttons" : {
+        "navD" : "Lug'at",
+        "navA" : "Til haqida",
+        "cardBtn" : "Batafsil"
+    },
+    "home": {
+        "cardText" : "Siz bu tilni o'rganish bo'yicha amaliy va grammatik mashqlarni bajarishingiz mumkin."
+    }
+}

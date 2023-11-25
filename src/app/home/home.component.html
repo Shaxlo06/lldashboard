@@ -1,0 +1,45 @@
+
+<div class="container">
+  <mat-card class="example-card">
+      <mat-card-header>
+          <mat-card-title>English</mat-card-title>
+      </mat-card-header>
+      <i class="flag-icon  flag-icon-us"></i>
+      <mat-card-content>
+          <p>
+            {{ 'home.cardText' | translate }}
+          </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <a routerLink="/english"><button mat-button>{{'buttons.cardBtn' | translate}}</button></a>
+      </mat-card-actions>
+  </mat-card>
+  <mat-card class="example-card">
+      <mat-card-header>
+          <mat-card-title>Russian</mat-card-title>
+      </mat-card-header>
+      <i class="flag-icon  flag-icon-ru"></i>
+      <mat-card-content>
+          <p>
+            {{ 'home.cardText' | translate }}
+          </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <a routerLink="/russian"><button mat-button>{{'buttons.cardBtn' | translate}}</button></a>
+      </mat-card-actions>
+  </mat-card>
+  <mat-card class="example-card">
+    <mat-card-header>
+        <mat-card-title>Uzbek</mat-card-title>
+    </mat-card-header>
+    <i class="flag-icon  flag-icon-uz"></i>
+    <mat-card-content>
+        <p>
+          {{ 'home.cardText' | translate }}
+        </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <a routerLink="/uzbek"><button mat-button>{{'buttons.cardBtn' | translate}}</button></a>
+    </mat-card-actions>
+</mat-card>
+</div>

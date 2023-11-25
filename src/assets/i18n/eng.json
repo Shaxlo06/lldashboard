@@ -1,0 +1,16 @@
+{
+    "sideNav" : {
+        "title" : "LLDashboard",
+        "users" : "User profile",
+        "select": "Select langugage"
+    },
+    "buttons" : {
+        "navD" : "Dictionary",
+        "navA" : "About",
+        "cardBtn" : "Learn more"
+    },
+    "home": {
+        "cardText" : "You can do practical and grammar exercises to learn this language."
+    }
+}
+

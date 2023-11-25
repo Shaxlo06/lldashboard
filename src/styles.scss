@@ -1,1 +1,155 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'bootstrap/scss/bootstrap';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+mat-form-field {
+  width: 190px;
+  padding: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+p {
+  padding-left: 25px;
+}
+
+.flag-icon {
+  margin-right: 7px;
+}
+
+
+.container {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  gap: 45px;
+  margin-top: 50px;
+  
+  mat-card {
+    width: 250px;
+    
+    mat-card-header{
+      margin: 10px auto;
+    }
+    
+    .flag-icon {
+      font-size: 187px;
+      margin: auto;
+      margin-bottom: 15px;
+      border-top: .5px solid rgb(193, 190, 190);
+    }
+    
+    p {
+      padding: 0;
+      text-align: center;
+    }
+    
+    mat-card-actions {
+      margin: auto;
+    }
+  }
+  
+}
+
+
+.mat-nav-button {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  align-items: center;
+  margin: auto;
+}
+
+
+.userName {
+  margin: auto;
+  width: 150px !important;
+}
+
+.mat-list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 15px;
+  
+  
+}
+a {
+  padding: 0 10px;
+  font-size: 18px;
+  color: black;
+  text-decoration: none;
+}
+
+mat-icon {
+  font-size: 35px;
+}
+
+
+.mode {
+  padding: 20px 18px;
+  z-index: 1;
+  
+}
+.toggle {
+  position: relative;
+  cursor: pointer;
+}
+.toggle-track {
+  width: 50px;
+  height: 25px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 0;
+  justify-content: space-between;
+  border: 1px solid #cdccd1;
+  background-color: #fff;
+  transition: all 0.2s ease;
+}
+.toggle-checkbox {
+  display: none;
+}
+.toggle-thumb {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #3F51B5;
+  transition: all 0.5s;
+}
+.toggle input:checked ~ .toggle-thumb {
+  transform: translateX(28px);
+}
+.toggle img {
+  width: 20px;
+  height: 20px;
+}
+
+
+
+
