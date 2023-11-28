@@ -30,6 +30,7 @@ import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { AuthService } from './auth/auth.service';
 import { ToastrModule } from 'ngx-toastr';
+import { AuthGuardService } from './auth.guard';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, "./assets/i18n/", ".json");
@@ -72,7 +73,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
     }),    
   ],
-  providers: [AuthService],
+  providers: [AuthService, AuthGuardService],
   bootstrap: [AppComponent],
 
 })

@@ -5,7 +5,12 @@
   [opened]="(isHandset$ | async) === false">
   <mat-toolbar><a routerLink="/home">{{ 'sideNav.title' | translate }}</a></mat-toolbar>
   <mat-nav-list>
-    <div class="mat-list-item mb-4"><a class="p-4" mat-list-item routerLink="/profile"><mat-icon class="pt-1" fontIcon="person"></mat-icon>{{ 'sideNav.users' | translate}}</a></div>
+    <div class="mat-list-item mb-4" *ngFor="let u of signUser">
+      <a class="p-4" mat-list-item routerLink="/profile">
+        <mat-icon class="pt-1" fontIcon="person"></mat-icon>
+        {{ u.fullName | translate}}
+      </a>
+    </div>
     <div >
       <!-- <p>{{'sideNav.select' | translate}} : </p> -->
       <select class="form-select userName" (click)="selectLang($any($event.target).value)" aria-label="Default select example">

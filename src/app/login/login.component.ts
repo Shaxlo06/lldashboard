@@ -39,15 +39,17 @@ export class LoginComponent implements OnInit {
       
       localStorage.setItem('user', JSON.stringify(user))
       
-      if (user) {
-        this.loginForm.reset()
+    
+        
+        console.log("hi");
         this.toastr.success('Login success');  
         this.router.navigate(["/home"])
-      } else {
-        alert('Something went wrong')
-        this.toastr.error('User not found')
+        this.loginForm.reset()
+      
+        // alert('Something went wrong')
+        // this.toastr.error('User not found')
         
-      }
+     
     }, err => {
       alert('Something went wrong')
     })

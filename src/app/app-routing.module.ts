@@ -7,12 +7,13 @@ import { ProfileComponent } from './profile/profile.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { AuthService } from './auth/auth.service';
+import { AuthGuardService } from './auth.guard';
 
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
   {path: 'login', component: LoginComponent},
   {path: 'registration', component: RegistrationComponent},
-  {path: 'home', component: HomeComponent, canActivate: []},
+  {path: 'home', component: HomeComponent},
   {path: 'dictionary', component: DictionaryComponent},
   {path: 'settings', component: SettingsComponent},
   {path: 'profile', component: ProfileComponent},

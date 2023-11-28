@@ -13,12 +13,16 @@ import { TranslateService } from '@ngx-translate/core';
 export class MenuSidenavComponent implements OnInit{
   languages = ['eng', 'uz', 'ru']
   storedTheme = localStorage.getItem('theme-color')
+  signUser: any = []
 
   constructor(private translateService: TranslateService) {
     translateService.setDefaultLang('eng')
   }
 
   ngOnInit(): void {
+    var user = JSON.parse(localStorage.getItem("user") || '{}')
+    this.signUser.push(user)
+    console.log(this.signUser);
     
   }
 
